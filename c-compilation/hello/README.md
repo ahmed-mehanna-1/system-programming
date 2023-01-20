@@ -1,0 +1,17 @@
+- C programming language compilation process is devided to the following phases
+	- Source Code -> Pre-processed code
+	- Pre-processed code -> Assembly
+	- Assembly -> Object or Maching code
+	- Object code -> Executeble code
+- Some libraries come with two versions, first one is the static library like libc.a and the 'a' referes to archive. Second one is the dynamic library like libc.so and the 'so' refers to shared object.
+	- You can use anyone of them while compiling your code, but when you use the static version you will end with a huge file size comparing to the use of dynamic library.
+	- To use the dynamic library --> gcc hello.c -o dynamicexe -lc
+	- To use the static library --> gcc hello.c -o dynamic -lc --static
+- /user/include/ contains all of the c language header files
+- To do the pre-processing use --> gcc -E hello.c 1> hello.i
+- To convert pre-processed code to assembly code --> gcc -S hello.i -std=c11
+	- the 'std' option is to follow the c11 standards
+	- man 7 standards is to see all of the c language standards
+- To convert assembly to machine code --> gcc -c -ggdb hello.s
+	- the 'ggdb' option is to provide the debuging with the machine code
+
